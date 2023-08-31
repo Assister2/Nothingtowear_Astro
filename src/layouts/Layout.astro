@@ -1,0 +1,76 @@
+---
+import Nav from "../components/Nav.astro";
+import "@fontsource-variable/inter";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Find your next outfit with the help of AI."
+    />
+    <title>I Have Nothing to Wear</title>
+  </head>
+  <body>
+    <main>
+      <Nav />
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --gradient-primary: linear-gradient(27deg, #6941c6 0%, #754fd8 100%);
+    --gradient-neutral: linear-gradient(27deg, #374151 0%, #506079 100%);
+    --gradient-hero: linear-gradient(48deg, #ecf8fc 0%, #f3e9ff 100%);
+    --linear-purple: linear-gradient(27deg, #53389e 0%, #6941c6 100%);
+  }
+
+  @font-face {
+    font-family: "Inter Variable";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .gradient-primary-bg {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-primary-bg:hover {
+    filter: brightness(85%);
+  }
+
+  .gradient-hero-bg {
+    background: var(--gradient-hero);
+  }
+
+  .linear-purple-bg {
+    background-color: linear-gradient(
+      27deg,
+      #53389e 0%,
+      #6941c6 100%
+    ) !important;
+  }
+
+  .hero-heading {
+    line-height: 2.125rem;
+    letter-spacing: -0.0285rem;
+  }
+
+  .hero-subheading {
+    line-height: 1.6rem;
+  }
+
+  .heading-16 {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.375rem;
+    letter-spacing: -0.011rem;
+  }
+</style>
