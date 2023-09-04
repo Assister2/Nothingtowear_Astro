@@ -28,6 +28,11 @@ import "@fontsource-variable/inter";
     --gradient-neutral: linear-gradient(27deg, #374151 0%, #506079 100%);
     --gradient-hero: linear-gradient(48deg, #ecf8fc 0%, #f3e9ff 100%);
     --linear-purple: linear-gradient(27deg, #53389e 0%, #6941c6 100%);
+    --linear-frosted-glass: linear-gradient(
+      85deg,
+      #fcfcfd 0%,
+      rgba(252, 252, 253, 0.8) 99.66%
+    );
   }
 
   @font-face {
@@ -41,7 +46,7 @@ import "@fontsource-variable/inter";
     background: var(--gradient-primary);
   }
 
-  .gradient-primary-bg:hover {
+  .button-hover:hover {
     filter: brightness(85%);
   }
 
@@ -50,11 +55,11 @@ import "@fontsource-variable/inter";
   }
 
   .linear-purple-bg {
-    background-color: linear-gradient(
-      27deg,
-      #53389e 0%,
-      #6941c6 100%
-    ) !important;
+    background: var(--linear-purple);
+  }
+
+  .linear-frosted-glass {
+    background: var(--linear-frosted-glass);
   }
 
   .button-shadow {
@@ -77,8 +82,29 @@ import "@fontsource-variable/inter";
   }
 
   .heading-14 {
-    font-size: 0.875rem;
     line-height: 1.1875rem;
     letter-spacing: -0.00525rem;
+  }
+
+  @media (max-width: 1024px) {
+    .mobile-h1 {
+      line-height: 2.125rem !important;
+    }
+  }
+
+  /* What's the right way to do this? */
+
+  @media (min-width: 1024px) && (max-width: 1440px) {
+    .tablet-h1 {
+      line-height: 3.125rem !important;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .desktop-h1 {
+      font-size: 4rem !important;
+      line-height: 5.625rem !important;
+      letter-spacing: 0.088rem !important;
+    }
   }
 </style>

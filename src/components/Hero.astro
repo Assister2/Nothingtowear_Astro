@@ -1,18 +1,22 @@
-<div class="flex flex-col">
+<section class="flex flex-col">
   <div
-    class="gradient-hero-bg flex flex-col justify-evenly text-center p-8 gap-4"
+    class="gradient-hero-bg flex flex-col justify-evenly text-center gap-4 py-6 md:py-0 md:mt-8 md:mx-2 md:rounded-3xl md:pb-20 lg:pb-36 lg:mx-8 lg:gap-8"
   >
-    <h1 class="text-2xl font-bold hero-heading text-zinc-800">
+    <h1
+      class="text-2xl md:text-3xl lg:text-4xl mobile-h1 tablet-h1 desktop-h1 font-bold text-zinc-800 px-2 md:mt-12 lg:px-16 xl:px-60"
+    >
       Find Perfect Wear with AI-Powered Experience
     </h1>
-    <h4 class="hero-subheading text-gray-700">
+    <h4 class="hero-subheading text-gray-700 md:text-2xl">
       Empowering Your Style with AI-Powered Recommendations
     </h4>
   </div>
-  <div class="p-3 flex flex-col justify-evenly gap-4 shadow-2xl">
-    <div class="relative flex items-center">
+  <div
+    class="p-3 flex flex-col justify-evenly gap-4 shadow-2xl linear-frosted-glass md:-mt-16 md:mx-24 md:rounded-3xl lg:-mt-28 lg:mx-28 lg:gap-6 lg:px-10"
+  >
+    <div class="relative flex items-center lg:mt-3">
       <svg
-        class="absolute left-3"
+        class="absolute left-3 lg:w-10 lg:h-10 lg:rounded-full"
         width="18"
         height="18"
         viewBox="0 0 18 18"
@@ -54,7 +58,7 @@
         viewBox="0 0 20 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="absolute right-2"
+        class="absolute right-2 lg:w-10 lg:h-10"
       >
         <g id="mic-02">
           <path
@@ -97,94 +101,99 @@
       <input
         placeholder="A summer vacation outfit for trip to Paris"
         type="search"
-        class="w-full border-2 border-gray-300 pl-10 pr-6 py-2 rounded-xl text-sm focus:outline-none focus:border-zinc-700 placeholder-zinc-800"
+        class="w-full border-2 border-gray-300 pl-8 pr-2 py-2 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-zinc-700 placeholder-zinc-800 lg:text-xl lg:pl-16 font-semibold"
       />
     </div>
     <hr class="border-none text-zinc-700 h-px bg-zinc-200" />
-    <div class="flex justify-evenly gap-2">
-      <div class="relative flex items-center w-1/2">
+    <div
+      class="flex justify-evenly gap-3 flex-col md:justify-between md:flex-row"
+    >
+      <div class="flex justify-evenly gap-2 md:w-1/3 xl:w-1/4">
+        <div
+          class="flex items-center justify-center w-1/2 border border-gray-300 rounded-3xl focus:border-zinc-700 py-2"
+        >
+          <select
+            class="appearance-none text-zinc-800 font-bold heading-14 md:text-xs lg:text-sm"
+          >
+            <option selected>Woman</option>
+            <option>Man</option>
+            <option>Unisex</option>xf
+          </select>
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="icons/Arrow Down Simple/Line">
+              <path
+                id="Shape"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.5547 7.0286C11.2944 6.76825 10.8723 6.76825 10.6119 7.0286L8.75 8.89052L6.88807 7.0286C6.62772 6.76825 6.20561 6.76825 5.94526 7.0286C5.68491 7.28894 5.68491 7.71105 5.94526 7.9714L8.2786 10.3047C8.53894 10.5651 8.96105 10.5651 9.2214 10.3047L11.5547 7.9714C11.8151 7.71105 11.8151 7.28894 11.5547 7.0286Z"
+                fill="#8495AC"></path>
+            </g>
+          </svg>
+        </div>
+        <div
+          class="flex items-center justify-center w-1/2 border border-gray-300 rounded-3xl focus:border-zinc-700 py-2"
+        >
+          <select
+            class="appearance-none text-slate-600 heading-14 md:text-xs lg:text-sm"
+          >
+            <option disabled selected>$min-max</option>
+          </select>
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="icons/Arrow Down Simple/Line">
+              <path
+                id="Shape"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.5547 7.0286C11.2944 6.76825 10.8723 6.76825 10.6119 7.0286L8.75 8.89052L6.88807 7.0286C6.62772 6.76825 6.20561 6.76825 5.94526 7.0286C5.68491 7.28894 5.68491 7.71105 5.94526 7.9714L8.2786 10.3047C8.53894 10.5651 8.96105 10.5651 9.2214 10.3047L11.5547 7.9714C11.8151 7.71105 11.8151 7.28894 11.5547 7.0286Z"
+                fill="#8495AC"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <!-- why isnt linear purple bg working? -->
+      <button
+        type="button"
+        class="linear-purple-bg bg-violet-700 button-hover button-shadow rounded-md w-full py-3 text-white flex items-center px-7 heading-16 font-medium justify-between md:w-1/3 md:px-4 md:text-sm md:justify-center md:gap-2 lg:text-base xl:w-1/5 xl:gap-4"
+        >Search with AI
         <svg
-          width="17"
-          height="17"
-          viewBox="0 0 17 17"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="absolute z-10 right-2"
+          class=""
         >
-          <g id="icons/Arrow Down Simple/Line">
+          <g id="search" clip-path="url(#clip0_3713_106)">
             <path
-              id="Shape"
+              id="Vector"
+              d="M12.5818 11.5222C13.1628 11.3299 13.8284 11.4649 14.2906 11.9272L16.5718 14.2084C17.2247 14.8613 17.2247 15.9199 16.5718 16.5728C15.9189 17.2257 14.8603 17.2257 14.2074 16.5728L11.9262 14.2916C11.4639 13.8294 11.3289 13.1638 11.5212 12.5828L9.96875 11.0304L11.0294 9.96973L12.5818 11.5222Z"
+              fill="white"></path>
+            <path
+              id="Vector_2"
               fill-rule="evenodd"
               clip-rule="evenodd"
-              d="M11.5547 7.0286C11.2944 6.76825 10.8723 6.76825 10.6119 7.0286L8.75 8.89052L6.88807 7.0286C6.62772 6.76825 6.20561 6.76825 5.94526 7.0286C5.68491 7.28894 5.68491 7.71105 5.94526 7.9714L8.2786 10.3047C8.53894 10.5651 8.96105 10.5651 9.2214 10.3047L11.5547 7.9714C11.8151 7.71105 11.8151 7.28894 11.5547 7.0286Z"
-              fill="#8495AC"></path>
+              d="M0.75 6.75C0.75 3.43629 3.43629 0.75 6.75 0.75C10.0637 0.75 12.75 3.43629 12.75 6.75C12.75 10.0637 10.0637 12.75 6.75 12.75C3.43629 12.75 0.75 10.0637 0.75 6.75ZM6.75 2.25C4.26472 2.25 2.25 4.26472 2.25 6.75C2.25 9.23528 4.26472 11.25 6.75 11.25C9.23528 11.25 11.25 9.23528 11.25 6.75C11.25 4.26472 9.23528 2.25 6.75 2.25Z"
+              fill="white"></path>
           </g>
+          <defs>
+            <clipPath id="clip0_3713_106">
+              <rect width="18" height="18" fill="white"></rect>
+            </clipPath>
+          </defs>
         </svg>
-        <select
-          class="border border-gray-300 rounded-3xl focus:border-zinc-700 py-2 appearance-none w-full text-center heading-16 font-bold text-zinc-800"
-        >
-          <option selected>Woman</option>
-          <option>Man</option>
-          <option>Unisex</option>
-        </select>
-      </div>
-      <div class="relative flex items-center w-1/2">
-        <svg
-          width="17"
-          height="17"
-          viewBox="0 0 17 17"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute z-10 right-2"
-        >
-          <g id="icons/Arrow Down Simple/Line">
-            <path
-              id="Shape"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11.5547 7.0286C11.2944 6.76825 10.8723 6.76825 10.6119 7.0286L8.75 8.89052L6.88807 7.0286C6.62772 6.76825 6.20561 6.76825 5.94526 7.0286C5.68491 7.28894 5.68491 7.71105 5.94526 7.9714L8.2786 10.3047C8.53894 10.5651 8.96105 10.5651 9.2214 10.3047L11.5547 7.9714C11.8151 7.71105 11.8151 7.28894 11.5547 7.0286Z"
-              fill="#8495AC"></path>
-          </g>
-        </svg>
-        <select
-          class="border border-gray-300 rounded-3xl focus:border-zinc-700 py-2 appearance-none relative w-full text-center text-slate-600"
-        >
-          <option disabled selected>$min-max</option>
-        </select>
-      </div>
+      </button>
     </div>
-    <!-- why isn't linear-purple-bg working -->
-    <button
-      type="button"
-      class="linear-purple-bg box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16); bg-violet-700 rounded-md w-full py-2 text-white flex items-center px-8 heading-16 font-medium flex justify-between"
-      >Search with AI
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 18 18"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class=""
-      >
-        <g id="search" clip-path="url(#clip0_3713_106)">
-          <path
-            id="Vector"
-            d="M12.5818 11.5222C13.1628 11.3299 13.8284 11.4649 14.2906 11.9272L16.5718 14.2084C17.2247 14.8613 17.2247 15.9199 16.5718 16.5728C15.9189 17.2257 14.8603 17.2257 14.2074 16.5728L11.9262 14.2916C11.4639 13.8294 11.3289 13.1638 11.5212 12.5828L9.96875 11.0304L11.0294 9.96973L12.5818 11.5222Z"
-            fill="white"></path>
-          <path
-            id="Vector_2"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M0.75 6.75C0.75 3.43629 3.43629 0.75 6.75 0.75C10.0637 0.75 12.75 3.43629 12.75 6.75C12.75 10.0637 10.0637 12.75 6.75 12.75C3.43629 12.75 0.75 10.0637 0.75 6.75ZM6.75 2.25C4.26472 2.25 2.25 4.26472 2.25 6.75C2.25 9.23528 4.26472 11.25 6.75 11.25C9.23528 11.25 11.25 9.23528 11.25 6.75C11.25 4.26472 9.23528 2.25 6.75 2.25Z"
-            fill="white"></path>
-        </g>
-        <defs>
-          <clipPath id="clip0_3713_106">
-            <rect width="18" height="18" fill="white"></rect>
-          </clipPath>
-        </defs>
-      </svg>
-    </button>
   </div>
-  <div class="gradient-hero rounded-xl h-44"></div>
-</div>
+</section>
