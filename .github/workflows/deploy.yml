@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update server
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: make upgrade
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USER }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
