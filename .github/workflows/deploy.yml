@@ -17,4 +17,5 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USER }}
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
-
+        env:
+          CI: true
