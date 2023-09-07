@@ -1,0 +1,28 @@
+---
+const { options } = Astro.props;
+---
+
+<div
+  class="flex items-center justify-center px-4 bg-zinc-800 text-white justify-center border border-gray-300 rounded-3xl py-2"
+>
+  <select
+    class="w-full appearance-none focus:none bg-zinc-800 leading-[1.1875rem] tracking-[-0.00525rem] md:text-xs lg:text-sm"
+  >
+    {
+      options.map((option: string) => {
+        return <option value={option}>{option}</option>;
+      })
+    }
+  </select>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="17"
+    viewBox="0 0 16 17"
+    fill="none"
+  >
+    <path
+      d="M3.38506 6.23915C3.4896 5.99291 3.73121 5.83301 3.99871 5.83301H11.9987C12.2662 5.83301 12.5078 5.99291 12.6123 6.23915C12.7169 6.48539 12.6641 6.77028 12.4783 6.96273L8.9312 10.6367C8.837 10.7344 8.72534 10.8502 8.61621 10.9364C8.48547 11.0397 8.27941 11.1663 7.99874 11.1663C7.71801 11.1663 7.51194 11.0397 7.38121 10.9364C7.27214 10.8502 7.16041 10.7343 7.06621 10.6367L3.51911 6.96273C3.3333 6.77028 3.28052 6.48539 3.38506 6.23915Z"
+      fill="white"></path>
+  </svg>
+</div>

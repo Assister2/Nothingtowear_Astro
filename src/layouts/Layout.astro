@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
 import "@fontsource-variable/inter";
+import "@fontsource/roboto";
 ---
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ import "@fontsource-variable/inter";
     />
     <title>I Have Nothing to Wear</title>
   </head>
-  <body>
+  <body class="bg-gray-100">
     <main>
       <Nav />
       <slot />
@@ -42,6 +43,13 @@ import "@fontsource-variable/inter";
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   .gradient-primary-bg {
     background: var(--gradient-primary);
   }
@@ -60,5 +68,9 @@ import "@fontsource-variable/inter";
 
   .button-shadow {
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  .search-button-shadow {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
   }
 </style>
