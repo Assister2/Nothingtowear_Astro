@@ -48,3 +48,23 @@ services:
      options:
         max-size: ${DOCKER_LOG_MAX_SIZE:-10m}
         max-file: ${DOCKER_LOG_MAX_FILE:-3}
+
+
+  frontend:
+    image: node:18
+    container_name: tdwa.frontend
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+    working_dir: /app
+    environment:
+      HOST: 0.0.0.0
+    #   REDIS_URI: ${REDIS_URI:-redis://redis:6379}
+    #   DB_HOST: ${DB_HOST:-postgresql}
+    ports:
+      - ${FRONTEND_LISTEN:-127.0.0.1:3000}:3000/tcp
+    logging:
+      options:
+        max-size: ${DOCKER_LOG_MAX_SIZE:-10m}
+        max-file: ${DOCKER_LOG_MAX_FILE:-3}
+    command: node ./dist/server/entry.mjs
