@@ -1,0 +1,76 @@
+---
+import Nav from "../components/Nav.astro";
+import "@fontsource-variable/inter";
+import "@fontsource/roboto";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Find your next outfit with the help of AI."
+    />
+    <title>I Have Nothing to Wear</title>
+  </head>
+  <body class="bg-gray-100">
+    <main>
+      <Nav />
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --gradient-primary: linear-gradient(27deg, #6941c6 0%, #754fd8 100%);
+    --gradient-neutral: linear-gradient(27deg, #374151 0%, #506079 100%);
+    --gradient-hero: linear-gradient(48deg, #ecf8fc 0%, #f3e9ff 100%);
+    --linear-purple: linear-gradient(27deg, #53389e 0%, #6941c6 100%);
+    --linear-frosted-glass: linear-gradient(
+      85deg,
+      #fcfcfd 0%,
+      rgba(252, 252, 253, 0.8) 99.66%
+    );
+  }
+
+  @font-face {
+    font-family: "Inter Variable";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .gradient-primary-bg {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero-bg {
+    background: var(--gradient-hero);
+  }
+
+  .linear-purple-bg {
+    background: var(--linear-purple);
+  }
+
+  .linear-frosted-glass {
+    background: var(--linear-frosted-glass);
+  }
+
+  .button-shadow {
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  .search-button-shadow {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+  }
+</style>

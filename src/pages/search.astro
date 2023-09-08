@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ChatHeader from "../components/search/ChatHeader.astro";
+import Conversation from "../components/search/Conversation.astro";
+import Results from "../components/search/Results.astro";
+---
+
+<Layout>
+  <div class="flex justify-center pt-6 px-16">
+    <div class="flex flex-col bg-white rounded-xl w-full">
+      <ChatHeader />
+      <div class="flex h-100">
+        <div class="w-7/12">
+          <Conversation />
+        </div>
+        <div class="w-5/12">
+          <Results />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
