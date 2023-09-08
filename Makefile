@@ -45,3 +45,8 @@ sql: ## ## accessing database shortcut
 
 upgrade:
 	git pull
+	docker-compose run --rm frontend npm i
+	docker-compose run --rm frontend npm run build
+	docker-compose up -d frontend
+	docker-compose restart frontend
+
