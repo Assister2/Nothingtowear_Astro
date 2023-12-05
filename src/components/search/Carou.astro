@@ -7,7 +7,7 @@ const results = [
   ];
 ---
 
-<style>
+<style is:inline>
     .carousel-indicators [data-bs-target] {
         position: relative;
         width: 60px;
@@ -33,10 +33,9 @@ const results = [
     <!-- <div class="carousel w-full"> -->
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-pause="true">
-        <div class="carousel-inner">
-            {results.map((result, index)=>(
-                <div class=`carousel-item w-full h-full ${index == 0 ? "active" : ""}` id={result.id} >
-                    <div class="flex flex-col w-full justify-center drop-shadow-sm">
+        {results.map((result, index)=>(
+            <div class=`carousel-item d-block w-100 ${index == 0 ? "active" : ""}` id={result.id} >
+                <div class="flex flex-col w-full justify-center drop-shadow-sm">
                     <div class="flex justify-center w-15 h-[242px] bg-[#CDCDCB]">
                         <img
                         src={result.path}
@@ -73,12 +72,11 @@ const results = [
                             </button>
                         </div>
                     </div>
-                    </div>
                 </div>
-            ))}
-        </div>
-        <!-- <div class="flex absolute top-[10px] justify-center w-full py-2 gap-2"> -->
-            <div class="carousel-indicators flex absolute top-[10px] justify-center w-full py-2 gap-2">
+            </div>
+        ))}
+        <div class="flex absolute top-[10px] justify-center w-full py-2 gap-2">
+            <div class="carousel-indicators">
                 {results.map((result,index)=>(
                     <button type="button" class=`${index == 0 ? "active" : ""}` data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index.toString()} aria-current="true" aria-label="Slide 1">
                         <span></span>
@@ -86,7 +84,7 @@ const results = [
                     <a href={"#" + result.id} class="btn btn-xs">{result.id}</a>
                 ))}
             </div>
-        <!-- </div> -->
+        </div>
     </div>
 <!-- </div> -->
 <script is:inline>
@@ -124,9 +122,8 @@ const results = [
         myCarousel.querySelector(".carousel-indicators .active span").style.width = i + "%";
 
         if (i >= 100) {
-            // i = 0; -> just in case
-            
-            carousel.next();
+        // i = 0; -> just in case
+        carousel.next();
         }
   }, 15);
 }
