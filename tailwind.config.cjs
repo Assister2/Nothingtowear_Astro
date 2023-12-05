@@ -26,6 +26,6 @@ module.exports = {
 			// require("tw-elements/dist/plugin.cjs"), 
 			//   require('@tailwindcss/forms'),
 			// require('flowbite/plugin')
-			// require("daisyui")
+			require("daisyui")
 			],
 }
