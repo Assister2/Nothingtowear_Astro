@@ -16,8 +16,8 @@ const results = [
     }
     .spa {
         cursor: pointer;
-        /* height: 15px;
-        width: 15px; */
+        /* height: 15px; */
+        /* width: 70px; */
         margin: 0 2px;
         /* background-color: #bbb; */
         /* border-radius: 50%; */
@@ -42,7 +42,7 @@ const results = [
         animation-duration: 1s;
     }
     @keyframes fade {
-        from {opacity: 1} 
+        from {opacity: 0.8} 
         to {opacity: 1}
     }
 </style>
@@ -159,7 +159,7 @@ const results = [
             <div class="carousel-indicators w-full flex flex-row justify-center py-2 gap-[10px] px-2">
                 {results.map((result,index)=>(
                     <button type="button" class=`spa w-full h-[4px] min-h-[2px] rounded-sm relative bg-[#22272F]/[0.5] ${index == 0 ? "active" : ""}` onclick=`currentSlide(${index})`>
-                        <span class=""></span>
+                        <span></span>
                     </button>
                 ))}
             </div>
@@ -178,6 +178,7 @@ const results = [
     function showSlides() {
         let i;
         let span_i=0;
+        let intervalID;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("spa");
         for (i = 0; i < slides.length; i++) {
@@ -202,6 +203,7 @@ const results = [
         //         dots[slideIndex-1].className += " active";        
         //     }
         // },20);
+        
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}    
         for (i = 0; i < dots.length; i++) {
@@ -209,7 +211,23 @@ const results = [
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 10000); 
+        console.log("WID", dots[slideIndex-1].getBoundingClientRect().width);
+        console.log("span", dots[slideIndex-1].querySelector("span").getBoundingClientRect().width);
+        // for(span_i=0;span_i<100;span_i++){
+        //     dots[slideIndex-1].querySelector("span").getBoundingClientRect().width = span_i + "%";
+        //     console.log("SPAN",dots[slideIndex-1].querySelector("span").getBoundingClientRect().width);
+        // }
+        intervalID = setInterval(function(){
+            span_i++;
+            console.log("ADD",span_i);
+            dots[slideIndex-1].querySelector("span").style.width = span_i + "%";
+            console.log("SPAN",dots[slideIndex-1].querySelector("span").style.width);
+            if(span_i >= 100){
+                clearInterval(intervalID);
+                span_i =0;
+            }
+        },20);
+        setTimeout(showSlides, 2000); 
     }
 </script>
 
