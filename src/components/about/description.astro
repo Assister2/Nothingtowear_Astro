@@ -1,0 +1,47 @@
+---
+const title = ["Description", "Additional Info", "Reviews(23)", "Questions"];
+const title_sm = ["Description", "Additional Info"];
+---
+<section class="flex lg:flex-row md:flex-row justify-between sm:flex-col lg:gap-6 md:gap-6 sm:gap-0
+bg-[#FFF] lg:rounded-[24px] md:rounded-[24px] lg:px-8 md:px-8 py-10 sm:px-2">
+    <div class="flex flex-col">
+        <div class="flex w-full border-b border-[#D4DAE3]">
+            <nav class="flex flex-row overflow-x-auto gap-20" aria-label="Tabs" role="tablist">
+                {
+                    title.map((result,index) => {
+                        return <button type="button"
+                                class="font-medium hs-tab-active:font-semibold hs-tab-active:border-[#22272F] hs-tab-active:text-[#22272F]
+                                       py-2 inline-flex items-center gap-x-2 active:border-b focus:border-b text-[20px] leading-[28px] whitespace-nowrap
+                                       text-[#506079] hover:text-[#22272F] focus:outline-none focus:border-[#22272F] focus:text-[#22272F] disabled:opacity-50
+                                       disabled:pointer-events-none active " 
+                                id={result} data-hs-tab={result} aria-controls={result} role="tab">
+                                 {result}
+                               </button>;
+                    })
+                }
+            </nav>
+            
+        </div>
+        <div class="mt-3">
+            <div id="Description" role="tabpanel" aria-labelledby="Description">
+                <p class="text-[#374151] text-[18px] leading-[28.8px] my-8">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint non providen.
+                </p>
+                <div class="flex flex-col gap-6">
+                    <h1 class="text-[20px] leading-[28px] font-bold text-[#22272F]">Information</h1>
+                    <ul class="text-[18px] leading-[25px] text-[#374151] list-disc list-inside">
+                        <li>Fabric: Denim</li>
+                        <li>Fit type: Loose fit</li>
+                        <li>Feature: Adjustable straps</li>
+                        <li>Front and back pockets</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="Questions" class="hidden" role="tabpanel" aria-labelledby="Questions">
+                <p class="text-gray-500 dark:text-gray-400">
+                    This is the <em class="font-semibold text-gray-800 dark:text-gray-200">second</em> item's tab body.
+                </p>
+            </div>
+         </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import ResultItem from "../search/ResultItem.astro";
+const results = [
+  { name :"Fendy Dress", path: "../../../assets/imgs/dress-1.png", },
+  { name :"Versace Dress", path: "../../../assets/imgs/dress-2.png", },
+  { name :"Prada Dress", path: "../../../assets/imgs/dress-3.png", },
+  { name :"Balenciaga Dress", path: "../../../assets/imgs/dress-4.png", },
+]
+const results_md = [
+  { name :"Fendy Dress", path: "../../../assets/imgs/dress-1.png", },
+  { name :"Versace Dress", path: "../../../assets/imgs/dress-2.png", },
+  { name :"Prada Dress", path: "../../../assets/imgs/dress-3.png", },
+]
+---
+<section class="flex lg:flex-row md:flex-row justify-between sm:flex-col lg:gap-6 md:gap-6 sm:gap-0
+bg-[#FFF] lg:rounded-[24px] md:rounded-[24px] lg:px-8 md:px-8 py-10 sm:px-2">
+    <div class="flex flex-col gap-8 w-full">
+        <div class="flex flex-row justify-between">
+            <h1 class="flex text-[24px] leading-[34px] font-bold">You might also like</h1>
+            <div class="flex flex-row">
+                <button type="button" class="text-white bg-[#D4DAE3] hover:bg-[#D4DAE3] font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19" stroke="#22272F" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12L11 18" stroke="#22272F" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12L11 6" stroke="#22272F" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button type="button" class="text-white bg-[#D4DAE3] hover:bg-[#D4DAE3] font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19" stroke="#22272F" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 18L19 12" stroke="#22272F" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 6L19 12" stroke="#22272F" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+            </div>
+        </div>
+        <div class="lg:flex md:hidden sm:hidden lg:flex-wrap w-full justify-between">
+            {
+                results.map((result) => {
+                    return <ResultItem name={result.name} order={result.path}/>;
+                })
+            }
+        </div>
+        <div class="lg:hidden md:flex sm:flex md:flex-wrap sm:flex-col w-full justify-between">
+            {
+                results_md.map((result) => {
+                    return <ResultItem name={result.name} order={result.path}/>;
+                })
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+---
+interface Props {
+	Name: string;
+    Description: string;
+}
+const { Name } = Astro.props;
+const { Description } = Astro.props;
+---
+
+<div class="flex flex-col lg:py-6 md:py-6 sm:py-4 lg:px-4 md:px-[19px] sm:px-4 items-start lg:rounded-[16px] sm:rounded-[16px] md:rounded-[20px] 
+    border-[1px] border-solid border-[#8495AC] bg-[#FFF] gap-4">
+    <div class="flex items-center justify-between w-full">
+        <h1 class="flex font-bold lg:text-[18px] md:text-[18px] sm:text-[16px]
+                    lg:leading-[25px] md:leading-[25px] sm:leading-[22px]">{Name}</h1>
+        <svg class="flex" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <circle cx="12" cy="12.5" r="12" fill="#ECEEF2"/>
+            <path d="M7.34375 12.6289H16.6575" stroke="#22272F" stroke-linecap="round"/>
+        </svg>
+    </div>
+    <h4 class="text-[16px] leading-[25.6px] font-normal">
+        {Description}
+    </h4>
+</div>

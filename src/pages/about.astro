@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/about/hero.astro";
+import Description from "../components/about/description.astro";
+import Refer from "../components/about/refer.astro";
+---
+
+<Layout Nav_Type="about">
+    <div class="flex flex-col bg-[#ECEEF2] lg:gap-12 md:gap-6 sm:gap-6 lg:py-12 md:py-6 sm:py-0 lg:px-16 md:px-8 sm:px-0 sm:relative">
+        <Hero />
+        <Description />
+        <Refer />
+        <div class="flex-row sm:sticky bottom-0 bg-[#FFF] justify-between gap-6 p-2 lg:hidden md:hidden sm:flex">
+            <div class="flex flex-col">
+                <div class="flex flex-row gap-3 items-center justify-start">
+                    <h2 class="flex text-[24px] leading-[34px] text-[#22272F]">$86.00</h2>
+                    <h3 class="flex text-[16px] leading-[22px] text-[#647793]">$104.00</h3>
+                </div>
+            </div>
+            <div class="flex">
+                <button
+                    class="search-button-shadow gradient-primary-bg rounded-[12px] text-white py-3 px-[40px] flex items-center gap-4 leading-[21px] text-[16px] tracking-[-0.011rem]"
+                    >Buy Now
+                </button>
+            </div>
+        </div>
+    </div>
+</Layout>

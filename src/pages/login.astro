@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout Nav_Type="main">
+    <div class="flex w-full justify-center">
+        <div class="flex w-[360px] flex-col p-4 gap-8 items-center">
+            <div class="flex flex-col">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center justify-center">
+                        <div class="flex p-2 gradient-footer-bg rounded-[8px]">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            >
+                            <rect width="24" height="24" rx="4" fill="url(#paint0_linear_3713_68)"
+                            ></rect>
+                            <path
+                                d="M15 1.25C15.3507 1.25 15.6546 1.49305 15.7317 1.83518L16.2704 4.22676C16.6637 5.97278 18.0272 7.33629 19.7732 7.7296L22.1648 8.26833C22.507 8.3454 22.75 8.64929 22.75 9C22.75 9.35071 22.507 9.6546 22.1648 9.73167L19.7732 10.2704C18.0272 10.6637 16.6637 12.0272 16.2704 13.7732L15.7317 16.1648C15.6546 16.507 15.3507 16.75 15 16.75C14.6493 16.75 14.3454 16.507 14.2683 16.1648L13.7296 13.7732C13.3363 12.0272 11.9728 10.6637 10.2268 10.2704L7.83518 9.73167C7.49305 9.6546 7.25 9.35071 7.25 9C7.25 8.64929 7.49305 8.3454 7.83518 8.26833L10.2268 7.7296C11.9728 7.33629 13.3363 5.97278 13.7296 4.22676L14.2683 1.83518C14.3454 1.49305 14.6493 1.25 15 1.25Z"
+                                fill="white"></path>
+                            <path
+                                d="M7 11.25C7.35071 11.25 7.6546 11.493 7.73167 11.8352L8.11647 13.5435C8.37923 14.7099 9.29012 15.6208 10.4565 15.8835L12.1648 16.2683C12.507 16.3454 12.75 16.6493 12.75 17C12.75 17.3507 12.507 17.6546 12.1648 17.7317L10.4565 18.1165C9.29012 18.3792 8.37923 19.2901 8.11647 20.4565L7.73167 22.1648C7.6546 22.507 7.35071 22.75 7 22.75C6.64929 22.75 6.3454 22.507 6.26833 22.1648L5.88353 20.4565C5.62077 19.2901 4.70988 18.3792 3.54345 18.1165L1.83518 17.7317C1.49305 17.6546 1.25 17.3507 1.25 17C1.25 16.6493 1.49305 16.3454 1.83518 16.2683L3.54345 15.8835C4.70988 15.6208 5.62077 14.7099 5.88353 13.5435L6.26833 11.8352C6.3454 11.493 6.64929 11.25 7 11.25Z"
+                                fill="white"></path>
+                            <defs>
+                                <linearGradient
+                                id="paint0_linear_3713_68"
+                                x1="6"
+                                y1="24"
+                                x2="18"
+                                y2="-1.16229e-06"
+                                gradientUnits="userSpaceOnUse"
+                                >
+                                <stop stop-color="#6941C6"></stop>
+                                <stop offset="1" stop-color="#754FD8"></stop>
+                                </linearGradient>
+                            </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 items-center">
+                        <h2 class="text-[24px] leading-[34px] font-semibold">Log in to your account</h2>
+                        <h4 class="text-[16px] leading-[22px] "> Welcome back! Please enter your details.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-full">
+                <div class="flex flex-col gap-4 w-full">
+                    <input type="email" id="Email address" 
+                        class="block w-full py-[10px] px-[14px] bg-[#FFF] border-[1px] border-[#D4DAE3] text-[16px] leading-[24px]
+                        disabled:opacity-50 shadow-pro disabled:pointer-events-none rounded-[8px] placeholder-[#414E63]" placeholder="Enter your email" aria-describedby="hs-input-helper-text">
+                    <button
+                    class="search-button-shadow gradient-primary-bg rounded-[8px] text-white py-[10px] px-[18px] flex 
+                        w-full items-center gap-4 leading-[1.375rem] tracking-[-0.011rem] justify-center">Continue with email</button>
+                </div>
+                <div class="flex items-center my-[24px] w-full justify-center">
+                    <div class="border-t border-gray-300 w-1/2"></div>
+                    <span class="mx-2 text-[#22272F] text-[14px] leading-[20px]">Or</span>
+                    <div class="border-t border-gray-300 w-1/2"></div>
+                </div>
+                <div class="flex flex-col gap-3 w-full">
+                    <button class="px-[16px] py-[10px] flex flex-row rounded-[8px] border-[1px] border-[#D4DAE3]
+                                   bg-[#FFF] justify-center items-center text-[16px] leading-[22px] font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <g clip-path="url(#clip0_3640_1171)">
+                              <path d="M24.2643 12.2763C24.2643 11.4605 24.1982 10.6404 24.0571 9.83789H12.7383V14.4589H19.22C18.951 15.9492 18.0868 17.2676 16.8213 18.1054V21.1037H20.6883C22.9591 19.0137 24.2643 15.9272 24.2643 12.2763Z" fill="#4285F4"/>
+                              <path d="M12.7391 24.0013C15.9756 24.0013 18.705 22.9387 20.6936 21.1044L16.8266 18.106C15.7507 18.838 14.3618 19.2525 12.7435 19.2525C9.61291 19.2525 6.95849 17.1404 6.00607 14.3008H2.01562V17.3917C4.05274 21.4439 8.20192 24.0013 12.7391 24.0013Z" fill="#34A853"/>
+                              <path d="M6.00082 14.3007C5.49816 12.8103 5.49816 11.1965 6.00082 9.70618V6.61523H2.01478C0.312781 10.006 0.312781 14.0009 2.01478 17.3916L6.00082 14.3007Z" fill="#FBBC04"/>
+                              <path d="M12.7391 4.74966C14.4499 4.7232 16.1034 5.36697 17.3425 6.54867L20.7685 3.12262C18.5991 1.0855 15.7198 -0.034466 12.7391 0.000808666C8.20192 0.000808666 4.05274 2.55822 2.01562 6.61481L6.00166 9.70575C6.94967 6.86173 9.6085 4.74966 12.7391 4.74966Z" fill="#EA4335"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_3640_1171">
+                                <rect width="24" height="24" fill="white" transform="translate(0.5)"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                        Continue with Google
+                    </button>
+                    <button class="px-[16px] py-[10px] flex flex-row rounded-[8px] border-[1px] border-[#D4DAE3]
+                                   bg-[#FFF] justify-center items-center text-[16px] leading-[22px] font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <g clip-path="url(#clip0_3640_1679)">
+                            <path d="M24.5 12C24.5 5.37258 19.1274 0 12.5 0C5.87258 0 0.5 5.37258 0.5 12C0.5 17.9895 4.8882 22.954 10.625 23.8542V15.4688H7.57812V12H10.625V9.35625C10.625 6.34875 12.4166 4.6875 15.1576 4.6875C16.4701 4.6875 17.8438 4.92188 17.8438 4.92188V7.875H16.3306C14.84 7.875 14.375 8.80008 14.375 9.75V12H17.7031L17.1711 15.4688H14.375V23.8542C20.1118 22.954 24.5 17.9895 24.5 12Z" fill="#1877F2"/>
+                            <path d="M17.1711 15.4688L17.7031 12H14.375V9.75C14.375 8.80102 14.84 7.875 16.3306 7.875H17.8438V4.92188C17.8438 4.92188 16.4705 4.6875 15.1576 4.6875C12.4166 4.6875 10.625 6.34875 10.625 9.35625V12H7.57812V15.4688H10.625V23.8542C11.8674 24.0486 13.1326 24.0486 14.375 23.8542V15.4688H17.1711Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3640_1679">
+                            <rect width="24" height="24" fill="white" transform="translate(0.5)"/>
+                            </clipPath>
+                        </defs>
+                        </svg>
+                        Continue with Facebook
+                    </button>
+                    <button class="px-[16px] py-[10px] flex flex-row rounded-[8px] border-[1px] border-[#D4DAE3]
+                                   bg-[#FFF] justify-center items-center text-[16px] leading-[22px] font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M21.3418 17.1447C21.0091 17.9133 20.6153 18.6208 20.159 19.2713C19.5371 20.158 19.0278 20.7719 18.6354 21.1127C18.027 21.6722 17.3752 21.9587 16.6772 21.975C16.1761 21.975 15.5718 21.8324 14.8683 21.5432C14.1626 21.2553 13.514 21.1127 12.921 21.1127C12.2991 21.1127 11.632 21.2553 10.9185 21.5432C10.204 21.8324 9.62831 21.9832 9.18819 21.9981C8.51884 22.0266 7.85166 21.7319 7.18571 21.1127C6.76066 20.742 6.22901 20.1064 5.59212 19.2061C4.90878 18.2446 4.34698 17.1297 3.90686 15.8587C3.43551 14.4857 3.19922 13.1563 3.19922 11.8692C3.19922 10.3948 3.5178 9.12321 4.15592 8.0576C4.65742 7.20166 5.32459 6.52647 6.15962 6.03081C6.99464 5.53514 7.89688 5.28256 8.86852 5.2664C9.40017 5.2664 10.0974 5.43085 10.9637 5.75405C11.8277 6.07834 12.3824 6.24279 12.6256 6.24279C12.8075 6.24279 13.4237 6.0505 14.4684 5.66714C15.4564 5.31162 16.2902 5.16441 16.9732 5.2224C18.8241 5.37178 20.2147 6.10142 21.1395 7.41595C19.4841 8.41896 18.6653 9.82379 18.6816 11.626C18.6965 13.0297 19.2057 14.1979 20.2066 15.1254C20.6601 15.5558 21.1667 15.8885 21.7302 16.1248C21.608 16.4793 21.479 16.8188 21.3418 17.1447ZM17.0968 0.440125C17.0968 1.54038 16.6948 2.56768 15.8936 3.51854C14.9267 4.64892 13.7572 5.30211 12.489 5.19904C12.4729 5.06705 12.4635 4.92812 12.4635 4.78214C12.4635 3.7259 12.9233 2.59552 13.7399 1.67127C14.1475 1.20331 14.666 0.814209 15.2948 0.503814C15.9221 0.19805 16.5156 0.0289566 17.0737 0C17.09 0.147086 17.0968 0.294182 17.0968 0.440111V0.440125Z" fill="black"/>
+                        </svg>
+                        Continue with Apple
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-row">
+                <h4 class="text-[#414E63] text-[12px] leading-[19.2px]">
+                    Don't have an account?
+                </h4>
+                <a class="text-[#6941C6] text-[14px] leading-[22.4px] font-semibold">Sign up</a>
+            </div>
+        </div>
+    </div>
+    
+</Layout>

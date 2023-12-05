@@ -3,20 +3,40 @@ import Layout from "../layouts/Layout.astro";
 import ChatHeader from "../components/search/ChatHeader.astro";
 import Conversation from "../components/search/Conversation.astro";
 import Results from "../components/search/Results.astro";
+import MySwiper from "../components/search/MySwiper.astro";
+import ResultsCarousel from "../components/search/ResultsCarousel.astro";
+import Carou from '../components/search/Carou.jsx';
+import ChatInput from "../components/search/ChatInput.astro";
+import Test from "./astronauts.astro";
 ---
 
-<Layout>
-  <div class="flex justify-center pt-6 px-16">
-    <div class="flex flex-col bg-white rounded-xl w-full">
-      <ChatHeader />
-      <div class="flex h-100">
-        <div class="w-7/12">
-          <Conversation />
+<Layout Nav_Type="search">
+  <div class="lg:flex md:flex sm:hidden justify-center bg-[#ECEEF2] pt-6 px-16 ">
+    <div class="flex-col rounded-[20px] border-[1px] mt-[24px] w-full">
+      <ChatHeader/>
+      <div class="flex h-100 mb-8 ">
+        <div class="w-7/12 rounded-bl-[20px] ">
+          <div class="overflow-y-auto lg:h-[736px] md:h-[1088px] h-full">
+            <Conversation />
+          </div>
+          <section class="bg-gray-100 h-[62px] md:h-[62px] w-full rounded-bl-[20px]">
+            <ChatInput Type="A"/>
+          </section>
         </div>
-        <div class="w-5/12">
-          <Results />
+        <div class="w-5/12 h-full lg:h-[800px] md:h-[1152px]">
+          <Results Type="A"/>
         </div>
       </div>
     </div>
   </div>
+  <div class="lg:hidden md:hidden sm:flex flex-col w-full relative">
+    <ResultsCarousel />
+    <div class="h-[269px] relative">
+      <Conversation />
+      <section class="bg-gray-100 w-full rounded-bl-[20px] sticky bottom-0">
+        <ChatInput Type="A"/>
+      </section>
+    </div>
+  </div>
 </Layout>
+ 

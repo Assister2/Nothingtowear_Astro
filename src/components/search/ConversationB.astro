@@ -1,0 +1,36 @@
+---
+import ChatInput from "./ChatInput.astro";
+import ChatQuestion from "./ChatQuestion.astro";
+import ChatAnswer from "./ChatAnswer.astro";
+import ChatGenerate from "./ChatGenerate.astro";
+import ChatCheck from "./ChatCheck.astro";
+import Results from "./Results.astro";
+---
+
+<section class="bg-gray-100 w-full h-full overflow-x-hidden overflow-y-auto px-2 py-4 gap-4">
+  <!-- <div class="bg-white w-[37.5rem] rounded px-2 py-2 ml-1">
+    <p>
+      Of course! A beautiful summer vacation dress for a trip to Paris could be
+      a versatile and stylish option. Here's a suggestion: Midi Wrap Dress: A 
+      midi wrap dress is a classic and chic choice that's perfect for exploring
+      Paris.
+    </p>
+  </div> -->
+  <ChatQuestion data="Of course! A beautiful summer vacation dress for a trip to Paris could be a versatile and stylish option. Here's a suggestion: Midi Wrap Dress: A midi wrap dress is a classic and chic choice that's perfect for exploring Paris."/>
+  <ChatAnswer data="Dress with tosca nuance"/>
+  <ChatGenerate />
+  <ChatCheck count={30}/>
+  <div class="flex lg:h-[865px] md:h-[865px] sm:h-[475px] mb-8">
+    <Results Type="B"/>
+  </div>
+  <ChatQuestion data="Did you find what you were looking for? Don't forget to check out :)"/>
+  <ChatQuestion data="Of course! A beautiful summer vacation dress for a trip to Paris could be a versatile and stylish option. Here's a suggestion: Midi Wrap Dress: A midi wrap dress is a classic and chic choice that's perfect for exploring Paris."/>
+  <ChatAnswer data="Dress with tosca nuance"/>
+  <ChatGenerate />
+  <ChatCheck count={30}/>
+  <!-- <section class="bg-gray-100 z-10 w-full absolute bottom-0 px-2 py-4 gap-4 rounded-b-[20px]">
+    <div class="ml-[-8px] w-full">
+      <ChatInput Type="A"/>
+    </div>
+  </section> -->
+</section>

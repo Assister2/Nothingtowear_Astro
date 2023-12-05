@@ -1,0 +1,14 @@
+---
+interface Props {
+    data: string;
+}
+const { data } = Astro.props;
+---
+<div class="flex items-end px-2 mt-4 justify-end">
+    <div class="bg-[#ECEBFC] w-[274px] rounded px-2 py-2 text-[16px] leading-[22.4px]">
+        <p>{data}</p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="15" viewBox="0 0 8 15" fill="none">
+        <path d="M8 6.42857C3.988 4.89328 2.28148 3.43833 0 0V9C3.5754 8.95043 5.3019 8.34248 8 6.42857Z" fill="#ECEBFC"/>
+    </svg>
+</div>

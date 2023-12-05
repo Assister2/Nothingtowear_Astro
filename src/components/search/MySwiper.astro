@@ -1,0 +1,43 @@
+---
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/swiper-bundle.css';
+import ResultItem from "./ResultItem.astro";
+const results = [
+  { id:"1", name :"Fendy Dress", path: "../../../assets/imgs/dress-1.png", },
+  { id:"2", name :"Versace Dress", path: "../../../assets/imgs/dress-2.png", },
+  { id:"3", name :"Prada Dress", path: "../../../assets/imgs/dress-3.png", },
+  { id:"4", name :"Balenciaga Dress", path: "../../../assets/imgs/dress-4.png", },
+];
+---
+
+<Swiper
+  spaceBetween={30}
+  slidesPerView={1}
+  centeredSlides={true}
+  autoplay={{delay: 2500 ,disableOnInteraction: false,}}
+  pagination={{ clickable: true}}
+  scrollbar={{ draggable: true}}
+  navigation={true}
+  modules={[Autoplay, Pagination, Navigation, Scrollbar, A11y]}
+  >
+  <!-- {results.map(({ id, name, path }) => (
+    <SwiperSlide id={id}>
+      <ResultItem order={path} name={name}/>
+    </SwiperSlide>))} -->
+  <div class="flex flex-row">
+  {results.map(({ id, name, path }) => {
+    return (
+      <SwiperSlide>
+        <img
+          src={path}
+          alt={name}
+        />
+      </SwiperSlide>
+    );
+  })}
+  </div>
+</Swiper>

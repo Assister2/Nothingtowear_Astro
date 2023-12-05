@@ -1,13 +1,38 @@
-<section class="bg-zinc-50 px-2">
+---
+import Expanded_Faq from '../Faq/Expanded_Faq.astro';
+import Default_Faq from '../Faq/Default_Faq.astro';
+---
+<section class="bg-[#F6F7F9] flex flex-col gap-12 py-10 lg:px-16  
+                md:px-8 sm:px-2 ">
   <div class="flex flex-col justify-center items-center text-center">
     <h1 class="text-2xl font-bold pt-10 leading-[2.125rem]">
       Frequently asked questions
-    </h1>
+    </h1> 
     <p class="leading-[1.8rem] font-[1.125rem] tracking-[0.01575rem] pt-2">
       Discover a wealth of information on our AI-Powered Fashion site, where you
       can gain comprehensive insights into the cutting-edge features,
       functionalities, and advantages that revolutionize the fashion industry
       and elevate your shopping experience.
     </p>
+  </div>
+  <div class="flex lg:flex-row md:flex-row sm:flex-col l g:gap-[34px] md:gap-[34px]">
+    <div class="lg:flex md:flex sm:hidden flex-col gap-4">
+      <Expanded_Faq Name="Question1" Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat."/>
+      <Default_Faq Name="Question2" />
+      <Default_Faq Name="Question3" />
+    </div>
+    <div class="lg:flex md:flex sm:hidden flex-col gap-4">
+      <Expanded_Faq Name="Question4" Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat."/>
+      <Default_Faq Name="Question5" />
+      <Default_Faq Name="Question6" />
+    </div>
+    <div class="lg:hidden md:hidden sm:flex flex-col gap-4 ">
+      <Expanded_Faq Name="Question1" Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat."/>
+      <Default_Faq Name="Question2" />
+      <Default_Faq Name="Question3" />
+      <Default_Faq Name="Question4" />
+      <Default_Faq Name="Question5" />
+      <Default_Faq Name="Question6" />
+    </div>
   </div>
 </section>

@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ChatHeader from "../components/search/ChatHeader.astro";
+import ConversationB from "../components/search/ConversationB.astro";
+import Results from "../components/search/Results.astro";
+import MySwiper from "../components/search/MySwiper.astro";
+import ResultsCarousel from "../components/search/ResultsCarousel.astro";
+import Carou from '../components/search/Carou.jsx';
+import ChatInput from "../components/search/ChatInput.astro";
+---
+
+<Layout Nav_Type="search">
+  <div class="lg:flex md:flex sm:hidden justify-center bg-[#ECEEF2] h-full pt-6 px-16">
+    <div class="flex-col rounded-[20px] border-[1px] mt-[24px] w-full">
+      <ChatHeader/>
+      <div class="flex-col w-full h-100 mb-8">
+        <div class="w-full rounded-b-[20px] h-full relative ">
+          <div class="overflow-y-auto lg:h-[1120px]">
+            <ConversationB />
+          </div>
+          <section class="bg-gray-100 w-full h-[62px] rounded-b-[20px]">
+            <ChatInput Type="B"/>
+          </section>
+        </div>
+        <!-- <section class="bg-gray-100 z-10 w-full px-2 py-4 gap-4 rounded-b-[20px]">
+          <div class="ml-[-8px] w-full">
+            <ChatInput Type="A"/>
+          </div>
+        </section> -->
+      </div>
+    </div>
+  </div>
+  <div class="lg:hidden md:hidden sm:flex flex-col w-full gap-4">
+    <div class="flex-col w-full  h-[646px] mb-8">
+      <div class="w-full h-full">
+        <ConversationB />
+      </div>
+      <section class="bg-gray-100 z-10 w-full gap-4 rounded-b-[20px]">
+        <div class="w-full">
+          <ChatInput Type="B"/>
+        </div>
+      </section>
+    </div>
+    
+    <!-- <section class="bg-gray-100 z-10 w-full absolute bottom-0 px-2 py-4 gap-4 rounded-b-[20px]">
+      <div class="ml-[-8px] w-full">
+        <ChatInput Type="A"/>
+      </div>
+    </section> -->
+  </div>
+
+</Layout>
+ 
