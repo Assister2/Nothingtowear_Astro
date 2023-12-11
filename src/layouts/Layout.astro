@@ -20,7 +20,7 @@ const { Nav_Type } = Astro.props;
     <!-- <script>import 'bootstrap/dist/js/bootstrap.bundle.min.js';</script> -->
     <title>I Have Nothing to Wear</title>
   </head>
-  <body class="bg-[#FFF] min-w-[375px]">
+  <body class="bg-[#FFF] min-w-[375px] ">
     <!-- <ThemeProvider> -->
     <main>
       <Nav type={Nav_Type}/>
@@ -49,11 +49,30 @@ const { Nav_Type } = Astro.props;
   @tailwind components;
   @tailwind utilities;
   @font-face {
-    font-family: "Inter Variable";
+    font-family: "InterVariable";
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
+  @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Inter-Bold.woff2') format('woff2');
+}
+  /* @font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_slnt,wght.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
 
   @font-face {
     font-family: "Roboto";
