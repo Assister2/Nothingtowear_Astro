@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}', 
-	'./node_modules/flowbite/**/*.js'
+	// './node_modules/flowbite/**/*.js'
 	// "./node_modules/tw-elements/dist/js/**/*.js", 
 	// "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
     // "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
@@ -26,6 +26,6 @@ module.exports = {
 			// require("tw-elements/dist/plugin.cjs"), 
 			//   require('@tailwindcss/forms'),
 			// require('flowbite/plugin')
-			require("daisyui")
+			// require("daisyui")
 			],
 }
